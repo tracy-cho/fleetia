@@ -1,0 +1,24 @@
+{
+  "presets": [
+    "@babel/typescript",
+    "@babel/react",
+    [
+      "@babel/env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": ["last 2 versions"]
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "babel-plugin-transform-rename-import",
+      {
+        "original": "^(.+?)\\.scss",
+        "replacement": "$1.css"
+      }
+    ]
+  ]
+}

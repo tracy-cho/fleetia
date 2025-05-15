@@ -1,0 +1,37 @@
+$breakpoint-desktop: 768px;
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin ellipsis {
+  width: 100%;
+  height: calc(1em + 2px);
+  padding-top: 1px;
+  padding-bottom: 1px;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow-x: hidden;
+  overflow-y: visible;
+  white-space: nowrap;
+}
+
+@mixin box-shadow {
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  background-color: var(--white);
+  box-sizing: border-box;
+
+  > .title {
+    font-weight: 700;
+    font-size: 20px;
+  }
+}

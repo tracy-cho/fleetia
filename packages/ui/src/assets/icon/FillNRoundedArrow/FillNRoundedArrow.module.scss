@@ -1,0 +1,11 @@
+.FillNRoundedArrow {
+  transition: transform 0.2s ease-in-out;
+
+  &.bottom {
+    transform: rotateZ(90deg);
+  }
+
+  &.top {
+    transform: rotateZ(270deg);
+  }
+}
